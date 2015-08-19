@@ -5,6 +5,12 @@ class Calculator
     def substract ( x, y )
       x - y 
     end
+    def multiply ( x, y )
+      x * y
+    end
+    def division ( x, y )
+      x / y
+    end
 end
 
 def verify ( expected, actual, message )
@@ -20,7 +26,9 @@ calculator = Calculator.new
 result = calculator.add( 1, 1 )
 verify( 2, result, 'Addition' )
 result2 = calculator.substract(2,1)
-verify( 2, result2, 'Substraction' )
-
-
+verify( 1, result2, 'Substraction' )
+result3 = calculator.multiply( 4, 4 )
+verify( 16, result3, 'multiplication' )
+result4 = calculator.division( 14, 2 )
+verify( 7, result4, 'division' )
 
