@@ -7,6 +7,12 @@ class Calculator
   def substract(x,y)
     x - y
   end
+  def multi(x,y)
+    x * y
+  end
+  def division(x,y) 
+    x / y
+  end
 end
 
 class TestCalculator < MiniTest::Test
@@ -20,7 +26,16 @@ class TestCalculator < MiniTest::Test
     calculator = Calculator.new
     result = calculator.substract(3,2)
     assert_equal 1, result
-
+  end
+  def test_multi
+    calculator = Calculator.new
+    result = calculator.multi(4,3)
+    assert_equal 12, result
+  end
+  def test_division
+    calculator = Calculator.new
+    result = calculator.division(6,3)
+    assert_equal 2,result
   end
 end
 
