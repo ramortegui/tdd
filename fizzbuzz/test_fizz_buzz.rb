@@ -9,26 +9,26 @@ class TestFizzBuzz < MiniTest::Test
   end
   def test_generate_fizz_for_multiples_of_3
     game = FizzBuzz.new
-    result = game.sequence
-    assert_equal('Fizz',result[2],"Checking the number 3")
+    result = game.transform(3)
+    assert_equal('Fizz',result,"Checking the number 3")
   end
 
   def test_generate_fizz_for_multiples_of_5
     game = FizzBuzz.new
-    result = game.sequence
-    assert_equal('Buzz',result[4],"Checking the number 5")
+    result = game.transform(5)
+    assert_equal('Buzz',result,"Checking the number 5")
   end
   def test_genrate_fizz_buzz_for_multiples_of_3_and_5
     game = FizzBuzz.new
-    result = game.sequence
-    assert_equal('FizzBuzz',result[14],"Checking the number 15")
+    result = game.transform(15)
+    assert_equal('FizzBuzz',result,"Checking the number 15")
 
   end
 
   def test_generate_number_is_not_multiple
     game = FizzBuzz.new
-    result = game.sequence
-    assert_equal(1,result[0],"Checking the value 0 ")
+    result = game.transform(1)
+    assert_equal(1,result,"Checking the value 0 ")
   end
   def test_print_fizz_for_multiples_of_4
     game = FizzBuzz.new
