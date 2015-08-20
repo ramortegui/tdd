@@ -24,6 +24,12 @@ class TestFizzBuzz < MiniTest::Test
     assert_equal('FizzBuzz',result[14],"Checking the number 15")
 
   end
+
+  def test_generate_number_is_not_multiple
+    game = FizzBuzz.new
+    result = game.sequence
+    assert_equal(1,result[0],"Checking the value 0 ")
+  end
   def test_print_fizz_for_multiples_of_4
     game = FizzBuzz.new
 
